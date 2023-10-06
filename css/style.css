@@ -1,0 +1,99 @@
+/*
+    --------------------
+        main styles
+    --------------------
+*/
+
+:root {
+    --fontColor: #111;
+    --fontFamily: 'Lato';
+
+    --mainBackgroundColor: #f2f2f6;
+    --secondBackgroundColor: #fff;
+
+    --firstColor: #44bdd3;
+    --secondColor: #92ddea;
+    --otherFontColor: #fff;
+    --shadowColor: #555;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.06rem;
+    font-family: var(--fontFamily);
+    color: var(--fontColor);
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+@media screen and (min-width: 1920px) {
+    html {
+        font-size: 0.625vw;
+    }
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-color: var(--mainBackgroundColor);
+}
+
+/*
+    --------------------
+        form styles
+    --------------------
+*/
+
+form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: max(12rem, 70%);
+    max-width: 50rem;
+
+    & input{
+        &:not([type='submit']){
+            width: 100%;
+            padding: 0.4rem;
+            margin-bottom: 1rem;
+            text-align: left;
+            border: 1px solid var(--shadowColor);
+            border-radius: 0.5rem;
+            background-color: var(--secondBackgroundColor);
+            font-size: 1.4em;
+            line-height: 2.0;
+            box-shadow: 0.1rem 0.1rem 0.5rem var(--shadowColor);
+
+            &::placeholder{
+                font-style: italic;
+            }
+        }
+
+        &[type='submit']{
+            padding: 0.8rem 2rem;
+            font-size: 1.7rem;
+            border: 1px solid var(--firstColor);
+            border-radius: 1rem;
+            background-color: var(--secondColor);
+            color: var(--otherFontColor);
+            transition: all .7s;
+
+            &:hover{
+                border-color: var(--secondColor);
+                background-color: var(--firstColor);
+            }
+        }
+    }
+}
