@@ -1,8 +1,6 @@
 import { ValidateInputs } from "./modules/validation.js";
-import { AccessConfirmation } from "./modules/accessMessage.js";
 
 (function () {
-    // const submitButton = document.querySelector('[type="submit"]');
     const registerForm = document.getElementById('register_form');
 
     function submitForm(event){
@@ -14,5 +12,3 @@ import { AccessConfirmation } from "./modules/accessMessage.js";
         return ValidateInputs()
     });
 })();
-
-// AccessConfirmation();
