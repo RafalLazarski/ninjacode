@@ -17,7 +17,7 @@ export function ValidateInputs(){
 }
 
 function ValidateName(name){
-    const nameRegex = /^[a-zA-Z\u00C0-\u017F\s'-]+$/;
+    const nameRegex = /^[a-zA-Z\u00C0-\u017F\s'-]{2,}$/;
 
     if(name.match(nameRegex)) return true;
 
