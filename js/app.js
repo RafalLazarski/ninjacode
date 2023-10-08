@@ -5,10 +5,8 @@ import { ValidateInputs } from "./modules/validation.js";
 
     function submitForm(event){
         event.preventDefault();
+        return ValidateInputs();
     }
     
     registerForm.addEventListener('submit', submitForm);
-    registerForm.addEventListener("submit", () => {
-        return ValidateInputs()
-    });
 })();
